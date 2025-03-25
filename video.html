@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .play-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-color: red;
+      /* transition: all 2000s; */
+    }
+    .play-button::before {
+      content: "";
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-color: red;
+      animation: hello infinite ease-in-out 1500ms;
+    }
+
+    @keyframes hello {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+    .traingle {
+      position: relative;
+      border-left: 26px solid white;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <img
+        src="images/article-details-small.jpg"
+        alt=""
+        height="250"
+        width="350"
+      />
+      <div class="play-button">
+        <div class="traingle"></div>
+      </div>
+    </div>
+  </body>
+</html>
